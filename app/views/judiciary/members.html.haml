@@ -1,2 +1,16 @@
 =h content_for(:title, "Tufts Community Union - Judiciary")
 .contentsection
+  .container-fluid
+    - @judiciary_members.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                .profileimg
+                  = image_tag member.photo.url
+                  / = image_tag("http://imgur.com/3E6xW9l.jpg", class: "profileimg")
+                .textline1
+                  = member.name
+                .textline2
+                  = member.email

@@ -129,7 +129,14 @@ Tcu::Application.routes.draw do
 
   # Navbar Judiciary Dropdown Link Pages
   get 'judiciary/' => 'judiciary#index'
-  get 'judiciary/members' => 'judiciary#members'
+
+  get 'treasury/members' => 'treasury#members'
+  get 'treasury/members/new' => 'treasury#members_new'
+  post 'treasury/members' => 'treasury#members_create'
+  get 'treasury/members/:id/edit' => 'treasury#members_edit'
+  put 'treasury/members/:id' => 'treasury#members_update'
+  delete 'treasury/members/:id' => 'treasury#members_destroy'
+
   get 'judiciary/minutes' => 'judiciary#minutes'
   get 'judiciary/resolutions' => 'judiciary#resolutions'
   get 'judiciary/constitution' => 'judiciary#constitution'
