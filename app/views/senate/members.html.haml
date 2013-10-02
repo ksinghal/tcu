@@ -1,2 +1,9 @@
 =h content_for(:title, "Tufts Community Union - Senate")
 .contentsection
+  - @senate_members.each do |member|
+    Name
+    = member.name
+    Email
+    = member.email
+    Graduation Year
+    = member.graduation_year

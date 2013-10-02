@@ -190,7 +190,9 @@
                 %li
                   = link_to "Council 9: Student Government", studentorganizations_student_government_path
             %li.divider-vertical
-              - if admin_signed_in?
+            - if admin_signed_in?
+              %li
                 = link_to('Logout', destroy_admin_session_path, :method => :delete)
-              - else
-                = link_to "Sign In", new_admin_session_path
+            - else
+              %li
+                = link_to "Admintrators", new_admin_session_path
