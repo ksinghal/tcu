@@ -1,0 +1,86 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.woodsection {
+  background-image: url('http://www.jaeger.im/wp-content/uploads/2011/10/darkwood_floor_1920x1200.jpg');
+  padding: 10px;
+  padding-top: 40px;
+  color: white;
+  height: 600px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.imageplaceholder {
+  background-color: whitesmoke;
+  width: 80%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.contentsection {
+  background: url('http://medleyweb.com/wp-content/uploads/2012/06/Seamless-Web-Background-Patterns-for-Your-Site-26.jpg');
+  width: 100%;
+  padding-top: 40px;
+}
+
+.mainlink {
+  font-size: 100px;
+  text-align: center;
+  line-height: 100px;
+  padding-top: 20px;
+}
+
+.smallercalendar {
+  font-size: 90px;
+  line-height: 100px;
+}
+
+.mainlink:hover {
+  background-color: #6699CC;
+  color: whitesmoke;
+}
+
+.paddedrow {
+  padding: 20px;
+}
+
+.mainlinktext {
+  font-size: 0.4em;
+}
+
+.mainimgs {
+  width: 70%;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.profileimg {
+  width: 100%;
+}
+
+.textline1, .textline2 {
+  background-color: #6699CC;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.textline1 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 15px;
+}
+
+.textline2 {
+  font-size: 15px;
+  line-height: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.spacerrow {
+  height: 50px;
+}

@@ -24,10 +24,11 @@ gem 'taps'
 gem 'newrelic_rpm'
 gem "paperclip",                  '~> 3.0'
 gem 'aws-sdk'
-gem 'will_paginate',               '~> 3.0'
+gem 'will_paginate',              '~> 3.0'
+gem 'pg'
+gem 'galleria-rails',             github: 'albandiguer/galleria-rails'
 
 group :production do 
-  gem 'pg'
   gem 'rails_12factor'
 end
 

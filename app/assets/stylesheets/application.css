@@ -7,7 +7,51 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require font-awesome
+ *= require jquery.ui.all
+ *= require select2
  *= require_self
  *= require_tree .
  */
+
+body {
+  padding-top: 40px;
+}
+@media (max-width: 979px) {
+  body {
+    padding: 0px;
+  }
+  .navbar-fixed-top {
+    margin: 0;
+  }
+}
+
+#galleria{
+  height: 600px;
+}
+
+.galleria-container {
+  background: transparent;
+}
+
+.container-fluid {
+  padding: 0px !important;
+}
+
+.footer {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.footer h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.footer .paddedbox {
+  padding: 15px;
+  width: 70%;
+  margin: 0 auto;
+}

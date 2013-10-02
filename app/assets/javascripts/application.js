@@ -10,6 +10,21 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+// = require jquery
+// = require jquery_ujs
+// = require bootstrap
+// = require galleria
+// = require_tree .
+
+$( document ).ready(function() {
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('#galleria', {
+      autoplay: 5000,
+      transition: 'fade',
+      clicknext: true,
+      easing: 'swing',
+      showInfo: false,
+      showCounter: false,
+      thumbnails: false
+    });
+});
