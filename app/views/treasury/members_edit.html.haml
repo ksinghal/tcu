@@ -1,20 +1,20 @@
-=h content_for(:title, "Tufts Community Union - Senate")
+=h content_for(:title, "Tufts Community Union - Treasury")
 .contentsection
   .row-fluid
     .span4
     .span4
       .formwrapper
-        = form_for @senate_member, :url => {:action => "members_create"}, :html => { :multipart => true } do |f|
+        = form_for @treasury_member, :url => {:action => "members_create"}, :html => { :multipart => true } do |f|
           %h3
-            Add a New Senate Member
+            Add a New Treasury Member
           %div
-            = f.email_field :email, placeholder: "Email" 
+            = f.email_field :email, placeholder: "Email"
           %div
             = f.text_field :name, placeholder: "Full Name"
           %div
             = f.number_field :graduation_year, placeholder: "Graduation Year"
           %div
-            = f.file_field :profile_image
+            = f.file_field :photo
           %div
             = f.submit "Create", class: "btn btn-success"
     .span4

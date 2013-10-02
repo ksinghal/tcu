@@ -86,6 +86,14 @@ Tcu::Application.routes.draw do
 
   # Navbar Treasury Dropdown Link Pages
   get 'treasury/' => 'treasury#index'
+
+  get 'treasury/members' => 'treasury#members'
+  get 'treasury/members/new' => 'treasury#members_new'
+  post 'treasury/members' => 'treasury#members_create'
+  get 'treasury/members/:id/edit' => 'treasury#members_edit'
+  put 'treasury/members/:id' => 'treasury#members_update'
+  delete 'treasury/members/:id' => 'treasury#members_destroy'
+
   get 'treasury/office_hours' => 'treasury#office_hours'
   get 'treasury/allocations_board' => 'treasury#allocations_board'
   get 'treasury/budgets' => 'treasury#budgets'
