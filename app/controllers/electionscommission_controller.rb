@@ -1,7 +1,12 @@
 class ElectionscommissionController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:index, :about, :members, :calendar, :candidates, :resolutions, :current_election, :documents, :applications, :election_results_archive, :get_involved, :referenda, :vote]
+
   def index
   end
   def about
+  end
+  def members
+    @ecom_members = EcomMembers.all
   end
   def calendar
   end
@@ -23,4 +28,21 @@ class ElectionscommissionController < ApplicationController
   end
   def vote
   end
+
+  # member resources
+  def members_new
+    @ecom_member = EcomMembers.new
+  end
+  def members_create
+    @ecom_member = EcomMembers.create(params[:ecom_members])
+    @ecom_members = EcomMembers.all
+    render :action => "members"
+  end
+  def members_edit
+  end
+  def members_update
+  end
+  def members_destroy
+  end
+
 end

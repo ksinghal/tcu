@@ -1,7 +1,7 @@
-=h content_for(:title, "Tufts Community Union - Treasury")
+=h content_for(:title, "Tufts Community Union - Elections Commission")
 .contentsection
   .container-fluid
-    - @treasury_members.in_groups_of(4, false).each_with_index do |group, index|
+    - @ecom_members.in_groups_of(4, false).each_with_index do |group, index|
       .row-fluid
         .paddedrow
           - group.each do |member|

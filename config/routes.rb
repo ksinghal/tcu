@@ -107,6 +107,14 @@ Tcu::Application.routes.draw do
 
   # Navbar Elections Commission Dropdown Link Pages
   get 'electionscommission/' => 'electionscommission#index'
+
+  get 'electionscommission/members' => 'electionscommission#members'
+  get 'electionscommission/members/new' => 'electionscommission#members_new'
+  post 'electionscommission/members' => 'electionscommission#members_create'
+  get 'electionscommission/members/:id/edit' => 'electionscommission#members_edit'
+  put 'electionscommission/members/:id' => 'electionscommission#members_update'
+  delete 'electionscommission/members/:id' => 'electionscommission#members_destroy'
+
   get 'electionscommission/about' => 'electionscommission#about'
   get 'electionscommission/calendar' => 'electionscommission#calendar'
   get 'electionscommission/candidates' => 'electionscommission#candidates'
