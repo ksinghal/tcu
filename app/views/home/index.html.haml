@@ -1,8 +1,8 @@
 .container-fluid
   .woodsection
     #galleria
-      = image_tag ("http://gradstudy.tufts.edu/images/homephoto1.jpg")
-      = image_tag ("http://www.otontap.com/images/schools/Tufts%20University.jpg")
+      - @slider_images.each do |slider_image|
+        = image_tag slider_image.photo
   .contentsection
     .row-fluid
       .paddedrow

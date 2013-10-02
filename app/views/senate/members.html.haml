@@ -1,9 +1,16 @@
 =h content_for(:title, "Tufts Community Union - Senate")
 .contentsection
-  - @senate_members.each do |member|
-    Name
-    = member.name
-    Email
-    = member.email
-    Graduation Year
-    = member.graduation_year
+  .container-fluid
+    - @senate_members.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                .profileimg
+                  = image_tag member.profile_image.url
+                  / = image_tag("http://imgur.com/3E6xW9l.jpg", class: "profileimg")
+                .textline1
+                  = member.name
+                .textline2
+                  = member.email

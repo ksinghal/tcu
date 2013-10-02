@@ -60,7 +60,9 @@ Tcu::Application.routes.draw do
 
   root :to => 'home#index'
 
-  get    "home"          => "home#index"
+  resources :sliderimage
+
+  get 'home' => 'home#index'
 
   # Navbar Senate Dropdown Link Pages
   get 'senate/' => 'senate#index'

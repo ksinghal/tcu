@@ -27,6 +27,7 @@ class SenateController < ApplicationController
   end
   def members_create
     @senate_member = SenateMembers.create(params[:senate_members])
+    @senate_members = SenateMembers.all
     render :action => "members"
   end
   def members_edit
