@@ -17,14 +17,16 @@
 // = require_tree .
 
 $( document ).ready(function() {
-    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-    Galleria.run('#galleria', {
-      autoplay: 5000,
-      transition: 'fade',
-      clicknext: true,
-      easing: 'swing',
-      showInfo: false,
-      showCounter: false,
-      thumbnails: false
-    });
+    if(!$("#galleria").length == 0) {
+      Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+      Galleria.run('#galleria', {
+        autoplay: 5000,
+        transition: 'fade',
+        clicknext: true,
+        easing: 'swing',
+        showInfo: false,
+        showCounter: false,
+        thumbnails: false
+      });
+    };
 });

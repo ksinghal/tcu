@@ -28,6 +28,19 @@ body {
   }
 }
 
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  line-height: 40px;
+}
+
+.dropdown-menu .divider {
+  margin: 0;
+  border-bottom: none;
+}
+
 #galleria{
   height: 600px;
 }
