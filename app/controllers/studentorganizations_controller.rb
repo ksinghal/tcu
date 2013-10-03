@@ -11,7 +11,7 @@ class StudentorganizationsController < ApplicationController
   end
   def performance
   end
-  def interest
+  def service_and_miscellaneous
   end
   def pre_professional
   end

@@ -153,7 +153,7 @@ Tcu::Application.routes.draw do
   get 'studentorganizations/media' => 'studentorganizations#media'
   get 'studentorganizations/religious' => 'studentorganizations#religious'
   get 'studentorganizations/performance' => 'studentorganizations#performance'
-  get 'studentorganizations/interest' => 'studentorganizations#interest'
+  get 'studentorganizations/service_and_miscellaneous' => 'studentorganizations#service_and_miscellaneous'
   get 'studentorganizations/pre_professional' => 'studentorganizations#pre_professional'
   get 'studentorganizations/political' => 'studentorganizations#political'
   get 'studentorganizations/student_government' => 'studentorganizations#student_government'
