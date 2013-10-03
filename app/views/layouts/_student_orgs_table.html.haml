@@ -27,11 +27,11 @@
           %td
             = link_to group.constitution.url do
               Download Constitution
-        - if admin_signed_in?
-          %tr
-            %td
-              = link_to student_organizations_new_path do
-                Add New Group
-            %td
-            %td
-            %td
+      - if admin_signed_in?
+        %tr
+          %td
+            = link_to student_organizations_new_path do
+              Add New Group
+          %td
+          %td
+          %td
