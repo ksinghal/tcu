@@ -147,7 +147,12 @@ Tcu::Application.routes.draw do
   get 'judiciary/archives' => 'judiciary#archives'
 
   # Navbar Student Organizations Dropdown Link Pages
-  get 'studentorganizations/' => 'studentorganizations#index'
+  get 'studentorganizations/new' => 'studentorganizations#new'
+  post 'studentorganizations/' => 'studentorganizations#create'
+  get 'studentorganizations/:id/edit' => 'studentorganizations#edit', as: 'studentorganizations_edit'
+  put 'studentorganizations/:id' => 'studentorganizations#update'
+  delete 'studentorganizations/:id' => 'studentorganizations#destroy', as: 'studentorganizations_delete'
+
   get 'studentorganizations/cultural' => 'studentorganizations#cultural'
   get 'studentorganizations/programming' => 'studentorganizations#programming'
   get 'studentorganizations/media' => 'studentorganizations#media'

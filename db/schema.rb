@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131002213709) do
+ActiveRecord::Schema.define(:version => 20131003173037) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -75,6 +75,22 @@ ActiveRecord::Schema.define(:version => 20131002213709) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "student_groups", :force => true do |t|
+    t.integer  "council"
+    t.string   "name"
+    t.integer  "account_number"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "budget_file_name"
+    t.string   "budget_content_type"
+    t.integer  "budget_file_size"
+    t.datetime "budget_updated_at"
+    t.string   "constitution_file_name"
+    t.string   "constitution_content_type"
+    t.integer  "constitution_file_size"
+    t.datetime "constitution_updated_at"
   end
 
   create_table "treasury_members", :force => true do |t|
