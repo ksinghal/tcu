@@ -34,14 +34,21 @@ class TreasuryController < ApplicationController
   end
   def members_create
     @treasury_member = TreasuryMembers.create(params[:treasury_members])
-    @treasury_members = TreasuryMembers.all
-    render :action => "members"
+    redirect_to treasury_members_path
   end
   def members_edit
+    @treasury_member = TreasuryMembers.find(params[:id])
   end
   def members_update
+    @treasury_member = TreasuryMembers.find(params[:id])
+    if @treasury_member.update_attributes(params[:treasury_members])
+      redirect_to treasury_members_path
+    end
   end
   def members_destroy
+    @treasury_member = TreasuryMembers.find(params[:id])
+    @treasury_member.destroy
+    redirect_to treasury_members_path
   end
 
 end

@@ -30,14 +30,21 @@ class JudiciaryController < ApplicationController
     @judiciary_member = JudiciaryMembers.new
   end
   def members_create
-    @judiciary_member = JudiciaryMembers.create(params[:ecom_members])
-    @judiciary_members = JudiciaryMembers.all
-    render :action => "members"
+    @judiciary_member = JudiciaryMembers.create(params[:judiciary_members])
+    redirect_to judiciary_members_path
   end
   def members_edit
+    @judiciary_member = JudiciaryMembers.find(params[:id])
   end
   def members_update
+    @judiciary_member = JudiciaryMembers.find(params[:id])
+    if @judiciary_member.update_attributes(params[:judiciary_members])
+      redirect_to judiciary_members_path
+    end
   end
   def members_destroy
+    @judiciary_member = JudiciaryMembers.find(params[:id])
+    @judiciary_member.destroy
+    redirect_to judiciary_members_path
   end
 end

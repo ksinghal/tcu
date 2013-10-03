@@ -35,14 +35,21 @@ class ElectionscommissionController < ApplicationController
   end
   def members_create
     @ecom_member = EcomMembers.create(params[:ecom_members])
-    @ecom_members = EcomMembers.all
-    render :action => "members"
+    redirect_to electionscommission_members_path
   end
   def members_edit
+    @ecom_member = EcomMembers.find(params[:id])
   end
   def members_update
+    @ecom_member = EcomMembers.find(params[:id])
+    if @ecom_member.update_attributes(params[:ecom_members])
+      redirect_to electionscommission_members_path
+    end
   end
   def members_destroy
+    @ecom_member = EcomMembers.find(params[:id])
+    @ecom_member.destroy
+    redirect_to electionscommission_members_path
   end
 
 end

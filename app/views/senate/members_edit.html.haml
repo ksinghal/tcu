@@ -16,7 +16,7 @@
           %div
             = f.file_field :profile_image
           %div
-            = f.submit "Create", class: "btn btn-success"
+            = f.submit "Update", class: "btn btn-success"
     .span4
       = link_to senate_members_delete_path(@senate_member.id), method: "delete" do
         Delete Member

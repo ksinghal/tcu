@@ -1,16 +1,30 @@
 =h content_for(:title, "Tufts Community Union - Judiciary")
 .contentsection
   .container-fluid
+    - if admin_signed_in?
+      .row-fluid
+        .span12.centeredtext
+          = link_to judiciary_members_new_path do
+            %h3
+              Add New Member
     - @judiciary_members.in_groups_of(4, false).each_with_index do |group, index|
       .row-fluid
         .paddedrow
           - group.each do |member|
             .span3
               .memberimgs
-                .profileimg
-                  = image_tag member.photo.url(:square)
-                  / = image_tag("http://imgur.com/3E6xW9l.jpg", class: "profileimg")
-                .textline1
-                  = member.name
-                .textline2
-                  = member.email
+                - if admin_signed_in?
+                  = link_to judiciary_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.photo.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = member.email
+                - else
+                  .profileimg
+                    = image_tag member.photo.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = member.email

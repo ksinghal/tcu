@@ -4,7 +4,7 @@
     .span4
     .span4
       .formwrapper
-        = form_for @ecom_member, :url => {:action => "members_create"}, :html => { :multipart => true } do |f|
+        = form_for @ecom_member, :url => {:action => "members_update"}, :html => { :multipart => true } do |f|
           %h3
             Add a New Elections Commission Member
           %div
@@ -16,5 +16,7 @@
           %div
             = f.file_field :photo
           %div
-            = f.submit "Create", class: "btn btn-success"
+            = f.submit "Update", class: "btn btn-success"
     .span4
+      = link_to electionscommission_members_delete_path(@ecom_member.id), method: "delete" do
+        Delete Member
