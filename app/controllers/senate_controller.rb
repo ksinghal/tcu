@@ -31,7 +31,7 @@ class SenateController < ApplicationController
     render :action => "members"
   end
   def members_edit
-    @senate_members = SenateMembers.find(params[:id])
+    @senate_member = SenateMembers.find(params[:id])
   end
   def members_update
   end
