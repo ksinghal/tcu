@@ -1,5 +1,5 @@
 class StudentorganizationsController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :cultural, :programmingm, :media, :religious, :performance, :service_and_miscellaneous, :pre_professional, :political, :student_government]
+  before_filter :authenticate_admin!, :except => [:index, :cultural, :programming, :media, :religious, :performance, :service_and_miscellaneous, :pre_professional, :political, :student_government]
 
   def index
   end

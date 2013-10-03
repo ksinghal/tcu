@@ -1,5 +1,5 @@
 class JudiciaryController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :members, :resolutions, :constitution, :bylaws, :start_a_club, :submit_complaint, :request_records, :re_recognition, :archives]
+  before_filter :authenticate_admin!, :except => [:index, :members, :minutes, :resolutions, :constitution, :bylaws, :start_a_club, :submit_complaint, :request_records, :re_recognition, :archives]
   
   def index
   end
