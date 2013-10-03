@@ -27,15 +27,14 @@ class SenateController < ApplicationController
   end
   def members_create
     @senate_member = SenateMembers.create(params[:senate_members])
-    @senate_members = SenateMembers.all
-    render :action => "members"
+    redirect_to senate_members_path
   end
   def members_edit
     @senate_member = SenateMembers.find(params[:id])
   end
   def members_update
     @senate_member = SenateMembers.find(params[:id])
-    if @senate_member.update(params[:senate_members])
+    if @senate_member.update_attributes(params[:senate_members])
       redirect_to senate_members_path
     end
   end

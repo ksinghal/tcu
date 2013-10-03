@@ -1,6 +1,12 @@
 =h content_for(:title, "Tufts Community Union - Senate")
 .contentsection
   .container-fluid
+    - if admin_signed_in?
+      .row-fluid
+        .span12.centeredtext
+          = link_to senate_members_new_path do
+            %h3
+              Add New Member
     - @senate_members.in_groups_of(4, false).each_with_index do |group, index|
       .row-fluid
         .paddedrow
