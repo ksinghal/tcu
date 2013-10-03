@@ -34,8 +34,15 @@ class SenateController < ApplicationController
     @senate_member = SenateMembers.find(params[:id])
   end
   def members_update
+    @senate_member = SenateMembers.find(params[:id])
+    if @senate_member.update(params[:senate_members])
+      redirect_to senate_members_path
+    end
   end
   def members_destroy
+    @senate_member = SenateMembers.find(params[:id])
+    @senate_member.destroy
+    redirect_to senate_members_path
   end
 
 end

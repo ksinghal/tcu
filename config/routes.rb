@@ -71,9 +71,9 @@ Tcu::Application.routes.draw do
   get 'senate/members' => 'senate#members'
   get 'senate/members/new' => 'senate#members_new'
   post 'senate/members' => 'senate#members_create'
-  get 'senate/members/:id/edit' => 'senate#members_edit'
+  get 'senate/members/:id/edit' => 'senate#members_edit', as: 'senate_members_edit'
   put 'senate/members/:id' => 'senate#members_update'
-  delete 'senate/members/:id' => 'senate#members_destroy'
+  delete 'senate/members/:id' => 'senate#members_destroy', as: 'senate_members_delete'
 
 
   get 'senate/calendar' => 'senate#calendar'
