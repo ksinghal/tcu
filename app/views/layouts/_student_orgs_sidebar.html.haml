@@ -1,0 +1,41 @@
+%ul.nav.nav-list.bs-docs-sidenav
+  %li
+    %h3.centeredtext
+      %u
+        Student Organization Councils
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'cultural'}"}
+    = link_to studentorganizations_cultural_path do
+      %h4
+        Council 1: Cultural
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'programming'}"}
+    = link_to studentorganizations_programming_path do
+      %h4
+        Council 2: Programming
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'media'}"}
+    = link_to studentorganizations_media_path do
+      %h4
+        Council 3: Media
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'religious'}"}
+    = link_to studentorganizations_religious_path do
+      %h4
+        Council 4: Religious
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'performance'}"}
+    = link_to studentorganizations_performance_path do
+      %h4
+        Council 5: Performance
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'interest'}"}
+    = link_to studentorganizations_interest_path do
+      %h4
+        Council 6: Interest
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'pre_professional'}"}
+    = link_to studentorganizations_pre_professional_path do
+      %h4
+        Council 7: Pre-Professional
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'political'}"}
+    = link_to studentorganizations_political_path do
+      %h4
+        Council 8: Political
+  %li{class: "#{'active' if params[:controller] == 'studentorganizations' and params[:action] == 'student_government'}"}
+    = link_to studentorganizations_student_government_path do
+      %h4
+        Council 9: Student Government
