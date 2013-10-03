@@ -20,4 +20,5 @@
           %div
             = f.submit "Update", class: "btn btn-success"
     .span4
-      = link_to "Delete Group", studentorganizations_delete_path
+      = link_to studentorganizations_delete_path(@group.id), method: "delete" do
+        Delete Group
