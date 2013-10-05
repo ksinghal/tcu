@@ -1,9 +1,8 @@
 .container-fluid
   .woodsection
-    .galleriaholder
-      #galleria
-        - @slider_images.each do |slider_image|
-          = image_tag slider_image.photo
+    #galleria
+      - @slider_images.each do |slider_image|
+        = image_tag slider_image.photo
   .contentsection
     .row-fluid
       .paddedrow
