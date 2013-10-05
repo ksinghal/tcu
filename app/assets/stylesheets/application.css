@@ -37,6 +37,7 @@ body {
     vertical-align: top;
 }
 .navbar-inner > .container { text-align:center; }
+.navbar-inner li { text-align:left; }
 
 @media (max-width: 979px) {
     .navbar .brand,
