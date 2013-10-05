@@ -39,7 +39,7 @@ class StudentorganizationsController < ApplicationController
     @groups = StudentGroups.where("council = ?", 4)
   end
   def performance
-    @groups = StudentGroups.where("council = ?", 5)
+    @groups = StudentGroups.where("council = ?", 5).order('account_number ASC')
   end
   def service_and_miscellaneous
     @groups = StudentGroups.where("council = ?", 6)
