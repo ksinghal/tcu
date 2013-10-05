@@ -45,10 +45,6 @@ body {
   position: static;
 }
 
-#galleria{
-  height: 600px;
-}
-
 .galleria-container {
   background: transparent;
 }

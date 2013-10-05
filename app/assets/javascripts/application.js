@@ -27,7 +27,8 @@ $( document ).ready(function() {
       easing: 'swing',
       showInfo: false,
       showCounter: false,
-      thumbnails: false
+      thumbnails: false,
+      height: 0.5625
     });
   };
 });
