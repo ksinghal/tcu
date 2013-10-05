@@ -10,8 +10,7 @@
           - if slider_image.link.nil?
             = image_tag slider_image.photo.url
           - else
-            = link_to slider_image.link do
-              = image_tag slider_image.photo.url
+            = image_tag(slider_image.photo.url, longdesc: slider_image.link)
     - if admin_signed_in?
       %h3.centeredtext
         = link_to "Manage Images", sliderimage_index_path
