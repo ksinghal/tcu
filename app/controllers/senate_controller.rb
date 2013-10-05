@@ -1,3 +1,5 @@
+require 'net/http'
+
 class SenateController < ApplicationController
   before_filter :authenticate_admin!, :except => [:index, :members, :calendar, :minutes, :resolutions, :constitution, :bylaws, :committees, :archives]
 
@@ -7,6 +9,7 @@ class SenateController < ApplicationController
     @senate_members = SenateMembers.all
   end
   def calendar
+    @calendar = Net::HTTP.get_response(URI.parse('https://www.google.com/calendar/embed?title=Tufts%20Community%20Union%20Calendar&showNav=0&showCalendars=0&height=600&wkst=1&bgcolor=%23ffffff&src=tuftscommunityunion%40gmail.com&color=%232952A3&ctz=America%2FNew_York')).body
   end
   def minutes
   end
