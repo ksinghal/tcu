@@ -27,30 +27,30 @@ class StudentorganizationsController < ApplicationController
 
 
   def cultural
-    @groups = StudentGroups.where("council = ?", 1)
+    @groups = StudentGroups.where("council = ?", 1).order('account_number ASC')
   end
   def programming
-    @groups = StudentGroups.where("council = ?", 2)
+    @groups = StudentGroups.where("council = ?", 2).order('account_number ASC')
   end
   def media
-    @groups = StudentGroups.where("council = ?", 3)
+    @groups = StudentGroups.where("council = ?", 3).order('account_number ASC')
   end
   def religious
-    @groups = StudentGroups.where("council = ?", 4)
+    @groups = StudentGroups.where("council = ?", 4).order('account_number ASC')
   end
   def performance
     @groups = StudentGroups.where("council = ?", 5).order('account_number ASC')
   end
   def service_and_miscellaneous
-    @groups = StudentGroups.where("council = ?", 6)
+    @groups = StudentGroups.where("council = ?", 6).order('account_number ASC')
   end
   def pre_professional
-    @groups = StudentGroups.where("council = ?", 7)
+    @groups = StudentGroups.where("council = ?", 7).order('account_number ASC')
   end
   def political
-    @groups = StudentGroups.where("council = ?", 8)
+    @groups = StudentGroups.where("council = ?", 8).order('account_number ASC')
   end
   def student_government
-    @groups = StudentGroups.where("council = ?", 9)
+    @groups = StudentGroups.where("council = ?", 9).order('account_number ASC')
   end
 end
