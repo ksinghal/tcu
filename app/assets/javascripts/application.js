@@ -23,7 +23,6 @@ $( document ).ready(function() {
     Galleria.run('#galleria', {
       autoplay: 5000,
       transition: 'fadeslide',
-      clicknext: true,
       easing: 'swing',
       showInfo: false,
       showCounter: false,

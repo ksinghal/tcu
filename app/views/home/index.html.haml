@@ -10,7 +10,7 @@
           - if slider_image.link.nil?
             = image_tag slider_image.photo.url
           - else
-            = image_tag(slider_image.photo.url, 'data-link' => slider_image.link)
+            = image_tag(slider_image.photo.url, 'data-link' => slider_image.link, 'data-description' => 'Testing Captions <h1>Hello</h1>')
     - if admin_signed_in?
       %h3.centeredtext
         = link_to "Manage Images", sliderimage_index_path
