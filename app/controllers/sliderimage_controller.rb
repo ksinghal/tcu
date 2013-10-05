@@ -2,6 +2,7 @@ class SliderimageController < ApplicationController
   before_filter :authenticate_admin!
   
   def index
+    @sliderimages = Sliderimage.all
   end
   def new
     @slider_image = Sliderimage.new
@@ -9,15 +10,21 @@ class SliderimageController < ApplicationController
   def create
     @slider_image = Sliderimage.create(params[:sliderimage])
 
-    redirect_to root_url
+    redirect_to sliderimage_index_path
   end
   def edit
-    @sliderimage = Sliderimage.find(params[:id])
+    @slider_image = Sliderimage.find(params[:id])
+  end
+  def update
+    @slider_image = Sliderimage.find(params[:id])
+    if @slider_image.update_attributes(params[:sliderimage])
+      redirect_to sliderimage_index_path
+    end
   end
   def destroy
-    @sliderimage = Sliderimage.find(params[:id])
-    @sliderimage.destroy
+    @slider_image = Sliderimage.find(params[:id])
+    @slider_image.destroy
 
-    redirect_to root_url
+    redirect_to sliderimage_index_path
   end
 end

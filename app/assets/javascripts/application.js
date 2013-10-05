@@ -22,13 +22,16 @@ $( document ).ready(function() {
     Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
     Galleria.run('#galleria', {
       autoplay: 5000,
-      transition: 'fade',
+      transition: 'fadeslide',
       clicknext: true,
       easing: 'swing',
       showInfo: false,
       showCounter: false,
       thumbnails: false,
-      height: 0.5625
+      height: 0.4,
+      imageCrop: 'height',
+      fullscreenDoubleTap: false,
+      imagePan: true,
     });
   };
 });

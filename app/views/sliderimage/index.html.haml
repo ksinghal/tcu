@@ -1,0 +1,11 @@
+.contentsection
+  .row-fluid
+    .span4
+    .span4
+      %h1 List of Slider Images
+      - @sliderimages.each_with_index do |image, index|
+        %h3
+          = link_to "Edit Image # #{index + 1}", edit_sliderimage_path(image.id)
+      %h3
+        = link_to "Add a New Image", new_sliderimage_path
+    .span4

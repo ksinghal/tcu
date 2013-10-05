@@ -1,9 +1,11 @@
 .contentsection
   .row-fluid
     .span4
+      - if !@slider_image.photo_file_name.nil?
+        = image_tag @slider_image.photo.url
     .span4
       .formwrapper
-        = form_for @slider_image, :url => {:action => "create"}, :html => { :multipart => true } do |f|
+        = form_for @slider_image, :url => {:action => "update"}, :html => { :multipart => true } do |f|
           %h3
             Add a New Slider Image
           %h6
@@ -13,5 +15,7 @@
           %div
             = f.file_field :photo
           %div
-            = f.submit "Create", class: "btn btn-success"
+            = f.submit "Update", class: "btn btn-success"
     .span4
+      = link_to sliderimage_path(@slider_image.id), method: "delete" do
+        Delete Image

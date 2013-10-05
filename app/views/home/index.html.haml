@@ -2,7 +2,16 @@
   .woodsection
     #galleria
       - @slider_images.each do |slider_image|
-        = image_tag slider_image.photo
+        - if slider_image.photo_file_name.nil?
+          = link_to slider_image.link do
+            %span.video
+              Video Link
+        - else
+          = link_to slider_image.link do
+            = image_tag slider_image.photo.url
+    - if admin_signed_in?
+      %h3.centeredtext
+        = link_to "Manage Images", sliderimage_index_path
   .contentsection
     .row-fluid
       .paddedrow
