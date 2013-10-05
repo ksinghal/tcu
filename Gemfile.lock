@@ -242,7 +242,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.1)
   better_errors (~> 0.7)
   binding_of_caller (~> 0.7)
-  bootstrap-sass (~> 2.2)
+  bootstrap-sass (~> 2.3)
   coffee-rails (~> 3.2)
   d3_rails (~> 3.0)
   devise (~> 2.2.3)
