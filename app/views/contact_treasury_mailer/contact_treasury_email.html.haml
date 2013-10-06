@@ -1,10 +1,4 @@
-%h1
-  = @sender_name
-%h1
-  = @sender_email
-%h1
-  = @message_subject
-%h1
-  = @message_category
-%h1
+%h3
+  = "New Message From: #{@sender_name}"
+%p
   = @message_body

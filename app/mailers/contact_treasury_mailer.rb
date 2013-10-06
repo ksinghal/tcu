@@ -6,6 +6,6 @@ class ContactTreasuryMailer < ActionMailer::Base
     @message_category = message_category
     @message_body = message_body
 
-    mail(to: 'tuftscommunityunion@gmail.com', subject: message_subject, from: sender_email, reply_to: sender_email)
+    mail(to: 'tuftscommunityunion@gmail.com', subject: "[#{@message_category}] #{@message_subject}", from: sender_email, reply_to: sender_email)
   end
 end
