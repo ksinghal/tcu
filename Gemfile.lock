@@ -5,6 +5,12 @@ GIT
     galleria-rails (1.2.9)
       railties (>= 3.2.0)
 
+GIT
+  remote: git://github.com/galetahub/simple-captcha.git
+  revision: 3557b78feb5fa2624efce065ff77dd4775a8256f
+  specs:
+    simple_captcha (0.1.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -266,6 +272,7 @@ DEPENDENCIES
   rspec-rails (~> 2.10)
   sass-rails (~> 3.2)
   select2-rails (~> 3.3)
+  simple_captcha!
   spork (~> 0.9)
   taps
   thin

@@ -5,6 +5,8 @@
     .span4
       .formwrapper
         = form_tag(url_for treasury_contact_path) do
+          - flash.each do |key, value|
+            = content_tag(:div, value, :class => "flash #{key}")
           %div
             = text_field_tag 'sender_name', nil, placeholder: "Your Name"
           %div
@@ -15,6 +17,8 @@
             = text_field_tag 'message_category', nil, placeholder: "Message Category"
           %div
             = text_area_tag 'message_body', nil, placeholder: "Message Body"
+          %div
+            = show_simple_captcha
           %div
             = submit_tag "Send Message", class: "btn btn-success"
     .span4

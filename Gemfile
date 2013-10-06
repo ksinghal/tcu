@@ -27,6 +27,7 @@ gem 'aws-sdk'
 gem 'will_paginate',              '~> 3.0'
 gem 'pg'
 gem 'galleria-rails',             github: 'albandiguer/galleria-rails'
+gem 'simple_captcha',             :git => 'git://github.com/galetahub/simple-captcha.git'
 
 group :production do 
   gem 'rails_12factor'
