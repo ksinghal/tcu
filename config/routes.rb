@@ -104,7 +104,6 @@ Tcu::Application.routes.draw do
   get 'treasury/contact' => 'treasury#contact'
   post 'treasury/contact' => 'treasury#contact'
   
-  get 'treasury/resolutions' => 'treasury#resolutions'
   get 'treasury/paperwork' => 'treasury#paperwork'
   get 'treasury/documents' => 'treasury#documents'
   get 'treasury/phone_directory' => 'treasury#phone_directory'
@@ -124,7 +123,6 @@ Tcu::Application.routes.draw do
   get 'electionscommission/about' => 'electionscommission#about'
   get 'electionscommission/calendar' => 'electionscommission#calendar'
   get 'electionscommission/candidates' => 'electionscommission#candidates'
-  get 'electionscommission/resolutions' => 'electionscommission#resolutions'
   get 'electionscommission/current_election' => 'electionscommission#current_election'
   get 'electionscommission/documents' => 'electionscommission#documents'
   get 'electionscommission/applications' => 'electionscommission#applications'
@@ -144,7 +142,6 @@ Tcu::Application.routes.draw do
   delete 'judiciary/members/:id' => 'judiciary#members_destroy', as: 'judiciary_members_delete'
 
   get 'judiciary/minutes' => 'judiciary#minutes'
-  get 'judiciary/resolutions' => 'judiciary#resolutions'
   get 'judiciary/constitution' => 'judiciary#constitution'
   get 'judiciary/bylaws' => 'judiciary#bylaws'
   get 'judiciary/start_a_club' => 'judiciary#start_a_club'

@@ -1,5 +1,5 @@
 class ElectionscommissionController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :about, :members, :calendar, :candidates, :resolutions, :current_election, :documents, :applications, :election_results_archive, :get_involved, :referenda, :vote]
+  before_filter :authenticate_admin!, :except => [:index, :about, :members, :calendar, :candidates, :current_election, :documents, :applications, :election_results_archive, :get_involved, :referenda, :vote]
 
   def index
   end

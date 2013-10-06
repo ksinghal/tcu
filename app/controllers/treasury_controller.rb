@@ -1,5 +1,5 @@
 class TreasuryController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :members, :office_hours, :allocations_board, :budgets, :contact, :resolutions, :paperwork, :documents, :phone_directory, :funding, :press]
+  before_filter :authenticate_admin!, :except => [:index, :members, :office_hours, :allocations_board, :budgets, :contact, :paperwork, :documents, :phone_directory, :funding, :press]
 
   def index
   end
@@ -21,8 +21,6 @@ class TreasuryController < ApplicationController
         redirect_to treasury_contact_path
       end
     end
-  end
-  def resolutions
   end
   def paperwork
   end
