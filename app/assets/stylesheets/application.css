@@ -28,6 +28,10 @@ body {
   }
 }
 
+@media (max-width: 1330px) {
+  /*do some stuff for fixing overlap of sidebar with constitution*/
+}
+
 .navbar .brand,
 .nav-collapse {
     float:none;
