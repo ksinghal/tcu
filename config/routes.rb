@@ -96,7 +96,10 @@ Tcu::Application.routes.draw do
 
   get 'treasury/office_hours' => 'treasury#office_hours'
   get 'treasury/allocations_board' => 'treasury#allocations_board'
+
   get 'treasury/contact' => 'treasury#contact'
+  post 'treasury/contact' => 'treasury#contact'
+  
   get 'treasury/resolutions' => 'treasury#resolutions'
   get 'treasury/paperwork' => 'treasury#paperwork'
   get 'treasury/documents' => 'treasury#documents'

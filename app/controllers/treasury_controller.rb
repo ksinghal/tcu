@@ -13,6 +13,9 @@ class TreasuryController < ApplicationController
   def budgets
   end
   def contact
+    if params[:sender_name] and params[:sender_email] and params[:message_subject] and params[:message_category] and params[:message_body]
+      ContactTreasuryMailer.contact_treasury_email(params[:sender_name], params[:sender_email], params[:message_subject], params[:message_category], params[:message_body]).deliver
+    end
   end
   def resolutions
   end
