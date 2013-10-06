@@ -1,29 +1,29 @@
 =h content_for(:title, "Tufts Community Union - Treasury")
 .contentsection
   .row-fluid
-    %h2
-      Contact Us
-    %p
-      You can send a message the TCU by filling in the following form:
-  .row-fluid
     .span4
     .span4
       .formwrapper
+        %h2
+          Contact Us
         = form_tag(url_for treasury_contact_path) do
-          - flash.each do |key, value|
-            = content_tag(:div, value, :class => "flash #{key}")
           %div
-            = text_field_tag 'sender_name', nil, placeholder: "Your Name"
+            = text_field_tag 'sender_name', nil, placeholder: "Your Name", required: true
           %div
-            = text_field_tag 'sender_email', nil, placeholder: "Your Email"
+            = text_field_tag 'sender_email', nil, placeholder: "Your Email", required: true
           %div
-            = text_field_tag 'message_subject', nil, placeholder: "Message Subject"
+            = text_field_tag 'message_subject', nil, placeholder: "Message Subject", required: true
           %div
-            = select_tag 'message_category', options_for_select([["General Feedback", "General Feedback"], ["Complaint", "Complaint"], ["Suggestion", "Suggestion"]])
+            %i
+              %label Purpose:
           %div
-            = text_area_tag 'message_body', nil, placeholder: "Message Body"
+            = select_tag 'message_category', options_for_select([["General Feedback", "General Feedback"], ["Complaint", "Complaint"], ["Suggestion", "Suggestion"]]), required: true
+          %div
+            = text_area_tag 'message_body', nil, placeholder: "Message Body", required: true
           %div
             = show_simple_captcha
+          - flash.each do |key, value|
+            = content_tag(:div, value, :class => "flash #{key}")
           %div
             = submit_tag "Send Message", class: "btn btn-success"
     .span4

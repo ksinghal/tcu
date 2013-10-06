@@ -5,4 +5,4 @@ en:
   hello: "Hello world"
   simple_captcha:
     label: ""
-    placeholder: ""
+    placeholder: "Verify the text above"
