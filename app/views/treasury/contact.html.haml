@@ -14,7 +14,7 @@
           %div
             = text_field_tag 'message_subject', nil, placeholder: "Message Subject"
           %div
-            = text_field_tag 'message_category', nil, placeholder: "Message Category"
+            = select_tag 'message_category', options_for_select([["General Feedback", "General Feedback"], ["Complaint", "Complaint"], ["Suggestion", "Suggestion"]])
           %div
             = text_area_tag 'message_body', nil, placeholder: "Message Body"
           %div
