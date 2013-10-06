@@ -10,7 +10,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = yield(:head)
-  %body.coloredbody
+  %body.coloredbody{'data-spy' => 'scroll', 'data-target' => '#side-nav', 'data-offset' => '150'}
     .container-fluid.main
       = render "layouts/header"
       = yield
