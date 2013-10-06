@@ -4,4 +4,5 @@
 en:
   hello: "Hello world"
   simple_captcha:
-    label: "Type the text"
+    label: ""
+    placeholder: ""
