@@ -12,8 +12,6 @@ class ElectionscommissionController < ApplicationController
   end
   def candidates
   end
-  def resolutions
-  end
   def current_election
   end
   def documents

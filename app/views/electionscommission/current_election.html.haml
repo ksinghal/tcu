@@ -1,2 +1,40 @@
 =h content_for(:title, "Tufts Community Union - Elections Commission")
 .contentsection
+  .paddedcontent
+    %h2
+      Current Election
+    %br/
+    %h4
+      There will be an election on WEDNESDAY, OCTOBER 9TH, 2013!
+    %p
+      The following items will be on the ballot:
+    %ul
+      %li
+        = link_to "Referenda", electionscommission_referenda_path
+    %br/
+    %h4
+      There will also be an election on THURSDAY, OCTOBER 17TH, 2013! 
+    %p
+      The following items will be on the ballot:
+    %ul
+      %li
+        One Senior Class Senate Seat
+      %li
+        Senior Class Council Vice President of Social Programming
+      %li
+        Senior Class Council Secretary
+      %li
+        Senior Class Council Treasurer
+      %li
+        Junior Class Council Secretary
+    %p
+      Petitions that are not for a specific class will be voted on by all TCU undergraduate students.
+    %br/
+    %p
+      Click
+      = succeed " to learn how to vote!" do
+        = link_to "here", electionscommission_vote_path
+    %p
+      Check out our
+      = succeed " for information on the upcoming elections." do
+        = link_to "calendar", electionscommission_calendar_path

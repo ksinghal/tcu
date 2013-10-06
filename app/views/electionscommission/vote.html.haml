@@ -1,2 +1,21 @@
 =h content_for(:title, "Tufts Community Union - Elections Commission")
 .contentsection
+  .paddedcontent
+    %h2
+      How To Vote:
+    %br/
+    %ol
+      %li
+        Go to Candidate's Page in the Elections Commission menu in the top bar.
+      %li
+        Actually read about the candidates, and choose wisely
+      %li
+        Sign into 
+        = succeed ' below and choose "Election Online" from the dropdown menu' do
+          = link_to "Tufts WebCenter", 'https://webcenter2.studentservices.tufts.edu/login.aspx'
+      %li
+        Click the link to be redirected to VoteNet
+      %li
+        Select your ballot and vote!
+    %br/
+    %iframe{'src' => 'https://webcenter2.studentservices.tufts.edu/login.aspx', 'class' => 'webcenter-iframe'}

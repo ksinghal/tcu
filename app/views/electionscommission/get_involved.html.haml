@@ -1,2 +1,10 @@
 =h content_for(:title, "Tufts Community Union - Elections Commission")
 .contentsection
+  .paddedcontent
+    %h2
+      Get Involved
+    %br/
+    %p
+      Any information regarding upcoming or current elections can be found in the
+      = succeed " tab. Please check back regularly for frequent updates during an election." do
+        = link_to "Current Election", electionscommission_current_election_path

@@ -1,2 +1,20 @@
 =h content_for(:title, "Tufts Community Union - Elections Commission")
 .contentsection
+  .paddedcontent
+    %h2
+      Applications
+    %br/
+    %h4
+      Apply today for the following positions:
+    %p
+      (Petitions, poster order forms, and other documents pertaining to elected positions can be found on the
+      = succeed " page.)" do
+        = link_to "Documents", electionscommission_documents_path
+    %br/
+    = link_to "Community Outreach Chair (1 open position) - DUE 10/5/13", root_url+"community_outreach_liaison_application.doc"
+    %p
+      The Community Outreach Liaison works on initiatives aimed toward fostering positive relationships between undergraduate students, their neighbors in Medford and Somerville, and local city governments.  The person filling this position will work alongside the Tufts Office of Government and Community Relations and report to the TCU Senate on a regular basis.
+    %br/
+    = link_to "Student Faculty Committees (32 open positions, 1-3 depending on the committee) - DUE 10/5/13", root_url+"student_faculty_committee_application.doc"
+    %p
+      Student-Faculty Committees meet on a regular basis throughout the semester to discuss and advise the construction and implementation of university policies regarding a wide range of issues.   We encourage all students to apply for membership on one of the many student-faculty committees including Athletics, Budget and Priorities, Campus Planning & Development, Arts & Sciences Curriculum, Educational Policy, Engineering Curriculum, Equal Educational Opportunity, Faculty Research Support & Facilities, Information Technology, Library, Summer School, and Undergraduate Admission & Financial Aid.
