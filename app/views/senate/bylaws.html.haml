@@ -1,2 +1,13 @@
 =h content_for(:title, "Tufts Community Union - Senate")
-.contentsection
+%object{data: root_url+"senate_bylaws.pdf", height: "700px", type: "application/pdf", width: "100%"}
+  .contentsection
+    .paddedcontent
+      %h2
+        Senate Bylaws
+      %br/
+      %p
+        It appears you don't have a PDF plugin for this browser.
+        No biggie... you can
+        %a{href: root_url+"senate_bylaws.pdf"}
+          click here to
+          download the PDF file.

@@ -14,10 +14,12 @@
     %p
       Some records may only be available in paper form.  All records released by written request will bear the signature of either the Historian of the TCUJ or the Chair of the TCUJ.  The official TCUJ policy with regard to records can be found in the
       = succeed ", Bylaw 7, Section F.  Bylaw 7, Section F can be assumed to overrule anything stated here if there is a conflict." do
-        %a{href: ""} Bylaws of the TCUJ
+        = link_to "Bylaws of the TCUJ", judiciary_bylaws_path
     %p
       Currently three records are publicly available on this website without the need to request them: the Bylaws of the TCUJ and Judicial Orders No. 1 and 2 (2012-2013).  The Bylaws are located
-      = succeed " and Judicial Order No. 1 (2012-2013) is located" do
-        %a{href: ""} here
+      = succeed " and Judicial Order No. 1 is located" do
+        = link_to "here", judiciary_bylaws_path
+      = succeed ", and Judical Order No. 2 is located" do
+        = link_to "here", root_url+"judicial_order_1.pdf"
       = succeed "." do
-        %a{href: ""} here
+        = link_to "here", root_url+"judicial_order_2.pdf"
