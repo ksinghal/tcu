@@ -14,34 +14,23 @@
                 Senate
                 %b.caret
               %ul.dropdown-menu
-                %li.dropdown
+                %li
                   = link_to "Members", senate_members_path
                 %li.divider
-                %li.dropdown
+                %li
                   = link_to "Calendar", senate_calendar_path
                 %li.divider
-                %li.nohovercolor
-                  %a Documents
                 %li
-                  = link_to senate_minutes_path do
-                    \ 
-                    %b> ·
-                    \ Minutes
+                  = link_to "Minutes", senate_minutes_path
+                %li.divider
                 %li
-                  = link_to senate_resolutions_path do
-                    \ 
-                    %b> ·
-                    \ Resolutions
+                  = link_to "Resolutions", senate_resolutions_path
+                %li.divider
                 %li
-                  = link_to senate_constitution_path do
-                    \ 
-                    %b> ·
-                    \ TCU Constitution
+                  = link_to "TCU Constitution", senate_constitution_path
+                %li.divider
                 %li
-                  = link_to senate_bylaws_path do
-                    \ 
-                    %b> ·
-                    \ Senate Bylaws
+                  = link_to "Senate Bylaws", senate_bylaws_path
                 %li.divider
                 %li
                   = link_to "Committees", senate_committees_path
@@ -121,26 +110,17 @@
                 Judiciary
                 %b.caret
               %ul.dropdown-menu
-                %li.dropdown
+                %li
                   = link_to "Members", judiciary_members_path
                 %li.divider
-                %li.nohovercolor
-                  %a Documents
                 %li
-                  = link_to judiciary_minutes_path do
-                    \ 
-                    %b> ·
-                    \ Minutes
+                  = link_to "Minutes", judiciary_minutes_path
+                %li.divider
                 %li
-                  = link_to judiciary_constitution_path do
-                    \ 
-                    %b> ·
-                    \ TCU Constitution
+                  = link_to "TCU Constitution", judiciary_constitution_path
+                %li.divider
                 %li
-                  = link_to judiciary_bylaws_path do
-                    \ 
-                    %b> ·
-                    \ Judiciary Bylaws
+                  = link_to "Judiciary Bylaws", judiciary_bylaws_path
                 %li.divider
                 %li
                   = link_to "Start a Club", judiciary_start_a_club_path
