@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006150824) do
+ActiveRecord::Schema.define(:version => 20131008005236) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                :default => "", :null => false
@@ -73,6 +73,18 @@ ActiveRecord::Schema.define(:version => 20131006150824) do
     t.string   "profile_image_content_type"
     t.integer  "profile_image_file_size"
     t.datetime "profile_image_updated_at"
+  end
+
+  create_table "senate_minutes", :force => true do |t|
+    t.string   "date"
+    t.text     "summary"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.string   "filename"
   end
 
   create_table "simple_captcha_data", :force => true do |t|
