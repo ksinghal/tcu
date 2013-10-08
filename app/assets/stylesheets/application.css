@@ -29,7 +29,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .span4 {
+  .span4, .span3 {
     margin-top: 30px;
     margin-bottom: 30px;
   }
