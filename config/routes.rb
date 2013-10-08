@@ -146,7 +146,6 @@ Tcu::Application.routes.draw do
   put 'judiciary/members/:id' => 'judiciary#members_update'
   delete 'judiciary/members/:id' => 'judiciary#members_destroy', as: 'judiciary_members_delete'
 
-  get 'judiciary/minutes' => 'judiciary#minutes'
   get 'judiciary/constitution' => 'judiciary#constitution'
   get 'judiciary/bylaws' => 'judiciary#bylaws'
   get 'judiciary/start_a_club' => 'judiciary#start_a_club'
