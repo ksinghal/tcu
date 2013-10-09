@@ -97,3 +97,8 @@ body {
 .galleria-thumbnails-list {
   display: none;
 }
+
+.undecoratedlink {
+  color: #333 !important;
+  text-decoration: none !important;
+}

@@ -17,22 +17,30 @@
   .contentsection
     .row-fluid
       .paddedrow
-        .span3.mainlink
-          %i.icon-calendar
-          .mainlinktext
-            Calendar
-        .span3.mainlink
-          %i.icon-lightbulb
-          .mainlinktext
-            Initiatives
-        .span3.mainlink
-          %i.icon-file
-          .mainlinktext
-            Minutes
-        .span3.mainlink
-          %i.icon-globe
-          .mainlinktext
-            Contact
+        .span3
+          = link_to senate_calendar_path, {class: "undecoratedlink"} do
+            .mainlink
+              %i.icon-calendar
+              .mainlinktext
+                Calendar
+        .span3
+          = link_to senate_resolutions_path, {class: "undecoratedlink"} do
+            .mainlink
+              %i.icon-lightbulb
+              .mainlinktext
+                Initiatives
+        .span3
+          = link_to senate_minutes_path, {class: "undecoratedlink"} do
+            .mainlink
+              %i.icon-file
+              .mainlinktext
+                Minutes
+        .span3
+          = link_to treasury_contact_path, {class: "undecoratedlink"} do
+            .mainlink
+              %i.icon-globe
+              .mainlinktext
+                Contact
     .row-fluid.spacerrow
     .row-fluid.spacerrow
     .row-fluid.spacerrow
