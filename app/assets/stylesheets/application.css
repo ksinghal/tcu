@@ -84,7 +84,7 @@ body {
 }
 
 .footer h5 {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -111,7 +111,7 @@ body {
 }
 
 .centeredimg {
-  width: 80%;
+  width: 100%;
 margin: 0 auto;
 background: url(border.png);
 height: 12px;
