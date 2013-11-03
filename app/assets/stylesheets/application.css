@@ -102,3 +102,7 @@ body {
   color: #333 !important;
   text-decoration: none !important;
 }
+
+.paddedrow {
+  width: 70%;
+}
