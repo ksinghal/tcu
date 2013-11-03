@@ -85,7 +85,7 @@ body {
 
 .footer h5 {
   text-align: center;
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .footer .paddedbox {
