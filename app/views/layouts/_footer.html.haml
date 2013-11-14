@@ -36,13 +36,46 @@
           %h5
             TCU Offices Map
           .centeredimg
+          .paddedbox.specialpadding
+            = image_tag "map.png", class: "mapimg"
         .span3
           %h5
             Social Media
           .centeredimg
+          .paddedbox.otherpadding
+            = link_to "https://twitter.com/TCUSenate" do
+              = image_tag "twitter.png", class: "twitter"
+            = link_to "https://www.facebook.com/tcusenate?ref=br_tf" do
+              = image_tag "facebook.png", class: "twitter"
         .span3
           %h5
             Contact Us
           .centeredimg
+          .paddedbox
+            %div
+              %strong
+                For media inquiries:
+            %div
+              Marketing & Communications Director
+            %div
+              mcd@asuc.org
+          .paddedbox
+            %div
+              %strong
+                For general questions:
+            %div
+              secretariat@asuc.org
+            %div
+              or 510.642.1431.
+          .paddedbox
+            %div
+              %strong
+                For Auxiliary questions:
+            %div
+              Auxiliary Front Desk
+            %div
+              frontdeskasuc@berkeley.edu
+            %div
+              or 510.642.4536
       .row-fluid
         .bigborder

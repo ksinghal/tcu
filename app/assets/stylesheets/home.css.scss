@@ -26,11 +26,12 @@ h1 {
 }
 
 .contentsection {
-  background: url('background.jpg');
-  width: 100%;
+  background: url('grid-uber.jpg');
   padding-top: 60px;
   min-height: 500px;
   padding-bottom: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .mainlink {
@@ -59,7 +60,7 @@ h1 {
 }
 
 .mainimgs {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 
