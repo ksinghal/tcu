@@ -7,7 +7,86 @@
           = link_to senate_members_new_path do
             %h3
               Add New Member
-    - @senate_members.in_groups_of(4, false).each_with_index do |group, index|
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        Senior Senators
+    - @senate_member_seniors.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                - if admin_signed_in?
+                  = link_to senate_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+                - else
+                  .profileimg
+                    = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        Junior Senators
+    - @senate_member_juniors.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                - if admin_signed_in?
+                  = link_to senate_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+                - else
+                  .profileimg
+                    = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        Sophomore Senators
+    - @senate_member_sophomores.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                - if admin_signed_in?
+                  = link_to senate_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+                - else
+                  .profileimg
+                    = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        First Year Senators
+    - @senate_member_freshman.in_groups_of(4, false).each_with_index do |group, index|
       .row-fluid
         .paddedrow
           - group.each do |member|
