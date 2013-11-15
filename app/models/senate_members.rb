@@ -1,5 +1,5 @@
 class SenateMembers < ActiveRecord::Base
-  attr_accessible :email, :graduation_year, :name, :profile_image
+  attr_accessible :email, :graduation_year, :name, :profile_image, :title
 
   has_attached_file :profile_image, styles: {
     thumb: '100x100>',
