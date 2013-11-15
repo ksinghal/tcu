@@ -6,7 +6,7 @@
       .formwrapper
         = form_for @senate_member, :url => {:action => "members_update"}, :html => { :multipart => true } do |f|
           %h3
-            Add a New Senate Member
+            Edit Senate Member
           %div
             = f.email_field :email, placeholder: "Email" 
           %div
