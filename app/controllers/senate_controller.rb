@@ -10,6 +10,8 @@ class SenateController < ApplicationController
     @senate_member_juniors = SenateMembers.where("graduation_year = '2015'")
     @senate_member_sophomores = SenateMembers.where("graduation_year = '2016'")
     @senate_member_freshman = SenateMembers.where("graduation_year = '2017'")
+    @senate_member_comm_reps = SenateMembers.where("graduation_year = 'cr'")
+    @senate_member_trustee_reps = SenateMembers.where("graduation_year = 'tr'")
   end
   def calendar
     @calendar = Net::HTTP.get_response(URI.parse('https://www.google.com/calendar/embed?title=Tufts%20Community%20Union%20Calendar&showNav=0&showCalendars=0&height=600&wkst=1&bgcolor=%23ffffff&src=tuftscommunityunion%40gmail.com&color=%232952A3&ctz=America%2FNew_York')).body

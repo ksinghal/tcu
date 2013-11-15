@@ -107,3 +107,53 @@
                     = member.name
                   .textline2
                     = mail_to member.email
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        Community Representatives
+    - @senate_member_comm_reps.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                - if admin_signed_in?
+                  = link_to senate_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+                - else
+                  .profileimg
+                    = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+    .row-fluid.spacerrow
+    .row-fluid
+      %h2
+        Trustee Representatives
+    - @senate_member_trustee_reps.in_groups_of(4, false).each_with_index do |group, index|
+      .row-fluid
+        .paddedrow
+          - group.each do |member|
+            .span3
+              .memberimgs
+                - if admin_signed_in?
+                  = link_to senate_members_edit_path(member.id) do
+                    .profileimg
+                      = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
+                - else
+                  .profileimg
+                    = image_tag member.profile_image.url(:square)
+                  .textline1
+                    = member.name
+                  .textline2
+                    = mail_to member.email
