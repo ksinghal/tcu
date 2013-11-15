@@ -106,8 +106,6 @@
                   .textline1
                     = member.name
                   .textline2
-                    = member.title
-                  .textline3
                     = mail_to member.email
     .row-fluid.spacerrow
     .row-fluid
@@ -125,6 +123,8 @@
                       = image_tag member.profile_image.url(:square)
                   .textline1
                     = member.name
+                  .textline3
+                    = member.title
                   .textline2
                     = mail_to member.email
                 - else
@@ -132,9 +132,9 @@
                     = image_tag member.profile_image.url(:square)
                   .textline1
                     = member.name
-                  .textline2
-                    = member.title
                   .textline3
+                    = member.title
+                  .textline2
                     = mail_to member.email
     .row-fluid.spacerrow
     .row-fluid
@@ -152,16 +152,16 @@
                       = image_tag member.profile_image.url(:square)
                   .textline1
                     = member.name
-                  .textline2
-                    = member.title
                   .textline3
+                    = member.title
+                  .textline2
                     = mail_to member.email
                 - else
                   .profileimg
                     = image_tag member.profile_image.url(:square)
                   .textline1
                     = member.name
-                  .textline2
-                    = member.title
                   .textline3
+                    = member.title
+                  .textline2
                     = mail_to member.email
