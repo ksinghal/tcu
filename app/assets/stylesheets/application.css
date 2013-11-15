@@ -148,3 +148,7 @@ body {
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
+.paddedtitle {
+  padding-bottom: 10px;
+}
