@@ -119,8 +119,6 @@ Tcu::Application.routes.draw do
   get 'treasury/paperwork' => 'treasury#paperwork'
   get 'treasury/documents' => 'treasury#documents'
   get 'treasury/phone_directory' => 'treasury#phone_directory'
-  get 'treasury/funding' => 'treasury#funding'
-  get 'treasury/press' => 'treasury#press'
 
   # Navbar Elections Commission Dropdown Link Pages
   get 'electionscommission/' => 'electionscommission#index'

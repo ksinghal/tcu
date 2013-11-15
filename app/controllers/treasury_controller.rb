@@ -28,10 +28,6 @@ class TreasuryController < ApplicationController
   end
   def phone_directory
   end
-  def funding
-  end
-  def press
-  end
 
 
   # member resources
