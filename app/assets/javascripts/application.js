@@ -27,7 +27,7 @@ $( document ).ready(function() {
       showInfo: false,
       showCounter: false,
       thumbnails: false,
-      width: 0.9
+      width: 0.9,
       imageCrop: 'height',
       fullscreenDoubleTap: false,
       imagePan: true,
