@@ -1,2 +1,43 @@
 =h content_for(:title, "Tufts Community Union - Senate")
 .contentsection
+  .paddedcontent
+    %h2
+      Senate Resolutions
+    %br/
+    .tableholder
+      %table.table.table-hover.table-condensed
+        %thead
+          %tr
+            %th
+              Document
+            %th
+              Date
+            %th
+              Summary
+        %tbody
+          - @senate_resolutions.each do |resolutions|
+            - if admin_signed_in?
+              %tr
+                %td
+                  = link_to "#{resolutions.filename}", resolutions.document.url
+                %td
+                  = resolutions.date
+                %td
+                  = resolutions.summary
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  = link_to "Edit Resolutions", senate_resolutions_edit_path(resolutions.id)
+            - else
+              %tr
+                %td
+                  = link_to "#{resolutions.filename}", resolutions.document.url
+                %td
+                  = resolutions.date
+                %td
+                  = resolutions.summary
+          - if admin_signed_in?
+            %tr
+              %td
+                = link_to senate_resolutions_new_path do
+                  Add New Resolution
+              %td
+              %td

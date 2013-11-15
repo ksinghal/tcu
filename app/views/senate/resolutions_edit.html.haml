@@ -1,0 +1,33 @@
+=h content_for(:title, "Tufts Community Union - Senate")
+.contentsection
+  .row-fluid
+    .span4
+    .span4
+      .formwrapper
+        = form_for @senate_resolutions, :url => {:action => "resolutions_update"}, :html => { :multipart => true } do |f|
+          %h3
+            Edit Senate Resolution
+          %br/
+          %div
+            = f.text_field :date, placeholder: "Date"
+          %div
+            (e.g. "DD/MM/YYYY" or "October 19th, 1993")
+          %br/
+          %div
+            = f.text_field :filename, placeholder: "Name for Entry"
+          %br/
+          %div
+            Summary
+          %div
+            = f.text_area :summary, class: "smaller-text-area"
+          %div
+            Document
+          %div
+            = f.file_field :document
+          %br/
+          %div
+            = f.submit "Update", class: "btn btn-success"
+    .span4
+    .span4
+      = link_to senate_resolutions_delete_path(@senate_resolutions.id), method: "delete" do
+        Delete Resolutions

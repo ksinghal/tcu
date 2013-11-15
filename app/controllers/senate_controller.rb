@@ -15,6 +15,7 @@ class SenateController < ApplicationController
     @senate_minutes = SenateMinutes.all
   end
   def resolutions
+    @senate_resolutions = SenateResolutions.all
   end
   def constitution
   end
@@ -71,6 +72,31 @@ class SenateController < ApplicationController
     @senate_minutes = SenateMinutes.find(params[:id])
     @senate_minutes.destroy
     redirect_to senate_minutes_path
+  end
+
+  # resolutions resources
+  def resolutions_new
+    @senate_resolutions = SenateResolutions.new
+  end
+  def resolutions_create
+    @senate_resolutions = SenateResolutions.create(params[:senate_resolutions])
+    @senate_resolutions.date = @senate_minutes.date.to_date
+    @senate_resolutions.save
+    redirect_to senate_resolutions_path
+  end
+  def resolutions_edit
+    @senate_resolutions = SenateResolutions.find(params[:id])
+  end
+  def resolutions_update
+    @senate_resolutions = SenateResolutions.find(params[:id])
+    if @senate_resolutions.update_attributes(params[:senate_resolutions])
+      redirect_to senate_resolutions_path
+    end
+  end
+  def resolutions_destroy
+    @senate_resolutions = SenateResolutions.find(params[:id])
+    @senate_resolutions.destroy
+    redirect_to senate_resolutions_path
   end
 
 end
