@@ -70,9 +70,9 @@ Tcu::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['AWS_BUCKET'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    :bucket => "tcuwebsite",
+    :access_key_id => "AKIAJMK257YFNROLGCLQ",
+    :secret_access_key => "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"
   }
 }
 end
